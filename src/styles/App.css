@@ -1,0 +1,57 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding-bottom: 40px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.content-area {
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-height) - 100px);
+  color: var(--text-light);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 90;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 20px;
+  }
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 12px;
+  }
+}

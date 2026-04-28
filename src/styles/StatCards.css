@@ -1,0 +1,129 @@
+.stat-container {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-info h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.header-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-red { background-color: var(--card-red-flat); }
+.card-orange { background-color: var(--card-orange-flat); }
+.card-green { background-color: var(--card-green-flat); }
+.card-purple { background-color: var(--card-purple-flat); }
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.icon-red { background-color: var(--card-red-icon); }
+.icon-orange { background-color: var(--card-orange-icon); }
+.icon-green { background-color: var(--card-green-icon); }
+.icon-purple { background-color: var(--card-purple-icon); }
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #425166;
+  margin-bottom: 8px;
+}
+
+.stat-change {
+  font-size: 0.75rem;
+  color: #4079ed;
+}
+
+/* Responsive Stats */
+@media (max-width: 1200px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .header-info {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .export-btn {
+    width: auto;
+    padding: 6px 12px;
+  }
+
+  .stat-container {
+    padding: 16px;
+  }
+}
