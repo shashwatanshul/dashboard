@@ -2,6 +2,10 @@
 
 A premium React-based sales dashboard implementation featuring real-time data visualization and user management.
 
+# Live Link
+
+https://dashboard-phi-six-36.vercel.app/
+
 ## Features
 
 ### Part 1: UI Implementation
